@@ -19,7 +19,7 @@ public class CursorEnter : MonoBehaviour
     }
 
     // 当鼠标悬停进入时调用
-    public void OnMouseEnter()
+    public void OnMouseOver()
     {
         if(this.gameObject.tag == tag.ToString())
             transform.localScale = originalScale * scaleMultiplier;

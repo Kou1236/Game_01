@@ -28,6 +28,11 @@ public static class EventHandler
         StartClickEvent?.Invoke();
     }
 
+    public static event Action CloseClickEvent;
+    public static void CallCloseClickEvent(){
+        CloseClickEvent?.Invoke();
+    }
+
     public static event Action FinishGameEvent;
     public static void CallFinishGameEvent(){
         FinishGameEvent?.Invoke();

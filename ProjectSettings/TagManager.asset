@@ -18,6 +18,11 @@ TagManager:
   - Hand
   - Tape
   - Food
+  - TV
+  - Character
+  - Book
+  - Neko
+  - Can
   layers:
   - Default
   - TransparentFX

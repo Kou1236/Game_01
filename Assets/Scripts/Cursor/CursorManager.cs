@@ -65,6 +65,23 @@ public class CursorManager : MonoBehaviour
                 var food = gameObject.GetComponent<ClickObject_10>();
                 food?.Clicked();
                 break;
+            case "TV":
+                var tv = gameObject.GetComponent<ClickObject_11>();
+                tv?.Clicked();
+                break;
+            case "Book":
+                var book = gameObject.GetComponent<ClickObject_12>();
+                book?.Clicked();
+                break;
+            case "Neko":
+                var neko = gameObject.GetComponent<ClickObject_13>();
+                neko?.Clicked();
+                break;
+            case "Can":
+                var can = gameObject.GetComponent<ClickObject_14>();
+                can?.Clicked();
+                break;
+
         }
     }
 
