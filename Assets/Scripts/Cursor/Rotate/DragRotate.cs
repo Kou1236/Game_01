@@ -30,6 +30,13 @@ public class DragRotate : MonoBehaviour
         _currentAngle = _initialAngle;
     }
 
+    void OnEnable()
+    {
+        // 启用时，重置状态
+        _isDragging = false;
+        _currentAngle = _initialAngle;
+    }
+
     void Update()
     {
         // 如果不在拖拽中，平滑地将物体转回初始角度

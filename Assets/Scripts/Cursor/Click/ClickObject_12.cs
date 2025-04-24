@@ -10,6 +10,8 @@ public class ClickObject_12 : ClickObject
     public GameObject target;
     public GameObject moveTarget;
     public float duration = 3f;
+    public GameObject game;
+    public GameObject note;
 
     public override void Clicked()
     {   
@@ -18,6 +20,8 @@ public class ClickObject_12 : ClickObject
         Transition_17 transition = target.GetComponent<Transition_17>();
         transition.Move();
         this.gameObject.tag = "Untagged";
+        game.transform.tag = "Untagged";
+        note.transform.tag = "Untagged";
 
         SpriteRenderer spriteRenderer = this.GetComponent<SpriteRenderer>();
         Sequence mySequence = DOTween.Sequence();

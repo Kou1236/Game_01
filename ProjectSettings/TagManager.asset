@@ -23,6 +23,11 @@ TagManager:
   - Book
   - Neko
   - Can
+  - Game
+  - Ball
+  - Note
+  - Sticker
+  - Draw
   layers:
   - Default
   - TransparentFX

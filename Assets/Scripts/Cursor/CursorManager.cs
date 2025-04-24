@@ -81,6 +81,22 @@ public class CursorManager : MonoBehaviour
                 var can = gameObject.GetComponent<ClickObject_14>();
                 can?.Clicked();
                 break;
+            case "Game":
+                var game = gameObject.GetComponent<ClickObject_15>();
+                game?.Clicked();
+                break;
+            case "Note":
+                var note = gameObject.GetComponent<ClickObject_16>();
+                note?.Clicked();
+                break;
+            case "Sticker":
+                var sticker = gameObject.GetComponent<ClickObject_17>();
+                sticker?.Clicked();
+                break;
+            case "Draw":
+                var draw = gameObject.GetComponent<ClickObject_18>();
+                draw?.Clicked();
+                break;
 
         }
     }

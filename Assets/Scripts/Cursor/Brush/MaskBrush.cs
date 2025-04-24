@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteMask), typeof(Collider2D))]
 public class MaskBrush : MonoBehaviour 
@@ -16,6 +17,10 @@ public class MaskBrush : MonoBehaviour
     public bool isPost = true;
 
     public bool isPaper = false;
+
+    public bool isNote = false;
+    public GameObject note;
+
 
     public int index;
 
@@ -99,6 +104,8 @@ public class MaskBrush : MonoBehaviour
                 FinishGame();
             if (isPaper)
                 StartCoroutine(NextGame());
+            if (isNote)
+                NextNote();
         }
     }
 
@@ -112,5 +119,16 @@ public class MaskBrush : MonoBehaviour
         yield return new WaitForSeconds(1.8f);
         FadeEffect fade = GetComponent<FadeEffect>();
         fade.FadeInImmediately();
+    }
+
+    void NextNote(){
+        note.GetComponent<Collider2D>().enabled = true;
+        this.gameObject.SetActive(false);
+        if(note.transform.tag == "Post"){
+            ButtonClick_2.Instance.buttonStatus[index] = true;
+            ButtonClick_2.Instance.rightButton.GetComponent<Button>().interactable = true;
+        }
+        else
+            note.transform.tag = "Post";
     }
 }

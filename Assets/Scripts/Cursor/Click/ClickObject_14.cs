@@ -9,6 +9,9 @@ public class ClickObject_14 : ClickObject
 
     public bool canClick = false;
     public int index = 0;
+    public Transform neko;
+    public Transform nekoPos;
+    public float duration = 6f;
 
     private void OnEnable(){
         EventHandler.StartClickEvent += OnStartClicKEvent;
@@ -31,8 +34,10 @@ public class ClickObject_14 : ClickObject
         if(canClick){
             Debug.Log("Clicked");
             canClick = false;
-            ButtonClick.Instance.buttonStatus[index] = true;
-            ButtonClick.Instance.rightButton.GetComponent<Button>().interactable = true;
+            neko.DOMove(nekoPos.position, duration).SetEase(Ease.InOutSine).OnComplete(()=> {
+                ButtonClick.Instance.buttonStatus[index] = true;
+                ButtonClick.Instance.rightButton.GetComponent<Button>().interactable = true;
+            });
         }
 
     }

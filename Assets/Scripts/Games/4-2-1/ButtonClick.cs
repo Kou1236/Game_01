@@ -21,6 +21,9 @@ public class ButtonClick : Singleton<ButtonClick>
     public float duration = 2.2f;
 
     public GameObject target;
+    public GameObject game;
+    public GameObject note;
+
 
     public void AddIndex(){
         currentIndex++;
@@ -81,6 +84,9 @@ public class ButtonClick : Singleton<ButtonClick>
         s.Join(book.GetComponent<SpriteRenderer>().DOFade(1f, duration).SetEase(Ease.InOutSine));
         s.OnComplete(() => {
             book.transform.tag = "Book";
+            game.GetComponent<Collider2D>().enabled = true;
+            game.transform.tag = "Game";
+            note.transform.tag = "Note";
         });
     }
 
