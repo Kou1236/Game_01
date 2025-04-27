@@ -28,6 +28,8 @@ TagManager:
   - Note
   - Sticker
   - Draw
+  - Dialog
+  - Area
   layers:
   - Default
   - TransparentFX

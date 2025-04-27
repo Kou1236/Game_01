@@ -28,7 +28,7 @@ public class DragPosition : MonoBehaviour
         maxPosX = maxXTransform.position.x;
     }
 
-    void Update(){
+    public virtual void Update(){
         if(isPopup){
             float distance = Vector3.Distance(transform.position, maxXTransform.position);
             if(distance < distanceX){

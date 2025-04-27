@@ -18,12 +18,12 @@ public class DragRotate : MonoBehaviour
     public float returnSpeed = 180f;
 
     // 内部状态
-    private float _initialAngle;       // 拖拽开始时记录的原始角度
-    private Vector3 _prevMousePos;     // 上一帧鼠标位置
-    private float _currentAngle;       // 当前累积角度
-    private bool _isDragging = false;  // 是否正在拖拽
+    public float _initialAngle;       // 拖拽开始时记录的原始角度
+    public Vector3 _prevMousePos;     // 上一帧鼠标位置
+    public float _currentAngle;       // 当前累积角度
+    public bool _isDragging = false;  // 是否正在拖拽
 
-    void Start()
+    public virtual void Start()
     {
         // 启动时，记录初始角度
         _initialAngle = transform.eulerAngles.z;
@@ -37,7 +37,7 @@ public class DragRotate : MonoBehaviour
         _currentAngle = _initialAngle;
     }
 
-    void Update()
+    public virtual void Update()
     {
         // 如果不在拖拽中，平滑地将物体转回初始角度
         if (!_isDragging)
@@ -66,7 +66,7 @@ public class DragRotate : MonoBehaviour
         _prevMousePos = Input.mousePosition;
     }
 
-    void OnMouseDrag()
+    public virtual void OnMouseDrag()
     {
         // 计算鼠标 Y 位移并转为角度增量
         Vector3 mousePos = Input.mousePosition;
@@ -78,7 +78,7 @@ public class DragRotate : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, _currentAngle);
     }
 
-    void OnMouseUp()
+    public virtual void OnMouseUp()
     {
         _isDragging = false;
     }

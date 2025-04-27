@@ -104,7 +104,7 @@ public class CameraController : Singleton<CameraController>
             StopShaking();
     }
 
-    void Shake(){
+    public void Shake(){
         Debug.Log("开始抖动");
         ShakeCamera.Instance.ShakeLayer();
     }
