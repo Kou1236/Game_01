@@ -15,6 +15,6 @@ public class Transition_16 : Transition
     }
 
     void StartScene(){
-
+        EventHandler.CallStartScrollEvent();
     }
 }

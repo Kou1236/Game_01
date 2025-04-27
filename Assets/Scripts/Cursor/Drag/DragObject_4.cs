@@ -46,4 +46,12 @@ public class DragObject_4 : DragObject
             offset = transform.position - mousePos;
         }
     }
+
+    void Update(){
+        if (Vector3.Distance(transform.position, targetPosition) <= threshold && !isFinished)
+        {
+            // 如果物体位置在允许范围内，执行指定函数
+            ExecuteFunction();
+        }
+    }
 }

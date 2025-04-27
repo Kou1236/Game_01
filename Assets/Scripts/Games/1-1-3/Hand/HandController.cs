@@ -60,7 +60,7 @@ public class HandController : MonoBehaviour
         if (currentState == State.Rotating)
         {
             UpdateRotation();
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && CursorBlock.AllowMouseButtonInput)
             {
                 StartExtend();
             }

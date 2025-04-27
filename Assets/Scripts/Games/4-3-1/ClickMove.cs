@@ -26,7 +26,7 @@ public class ClickMove : MonoBehaviour
     void Update()
     {
         // 点击检测
-        if (Input.GetMouseButtonDown(0) && canMove)
+        if (Input.GetMouseButtonDown(0) && canMove && CursorBlock.AllowMouseButtonInput)
         {
             Vector3 wp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(wp, Vector2.zero);

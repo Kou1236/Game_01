@@ -15,7 +15,7 @@ public class ClickAction : Singleton<ClickAction>
     public virtual void Update()
     {
         // 检测鼠标左键点击（0表示左键）
-        if (Input.GetMouseButtonDown(0) && canClick)
+        if (Input.GetMouseButtonDown(0) && canClick && CursorBlock.AllowMouseButtonInput)
         {
             if(index == 0){
                 animator.SetBool(boolParameterName, true);

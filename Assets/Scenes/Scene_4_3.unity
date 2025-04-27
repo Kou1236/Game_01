@@ -503,6 +503,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 0}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &260101441
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +679,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 1373111926}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &430255781
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +986,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 0}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &677062697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1576,52 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   openDuration: 2
   closeDuration: 0.3
+--- !u!1 &978771968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978771970}
+  - component: {fileID: 978771969}
+  m_Layer: 0
+  m_Name: GameSave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &978771969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978771968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa24810ae2d0c842bc34e0d0ab884a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSave: {fileID: 11400000, guid: f077e37a1869761428e88b6c9536d399, type: 2}
+  saveIndex: 9
+--- !u!4 &978771970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978771968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018683420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1823,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 0}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!114 &1141242786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1950,6 +2000,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 0}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1290787760
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +3000,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 0}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1784714311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,6 +3164,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 0}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!212 &1813956319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3494,6 +3547,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 1888377747}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!212 &2009481610
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3683,6 +3737,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 16857634}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &2120780631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3733,3 +3788,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1290787763}
   - {fileID: 227868723}
+  - {fileID: 978771970}

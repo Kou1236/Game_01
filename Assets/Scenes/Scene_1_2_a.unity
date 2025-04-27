@@ -557,6 +557,7 @@ GameObject:
   - component: {fileID: 885784202}
   - component: {fileID: 885784204}
   - component: {fileID: 885784205}
+  - component: {fileID: 885784206}
   m_Layer: 0
   m_Name: manga
   m_TagString: Untagged
@@ -701,6 +702,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.49, y: 17.651945}
   m_EdgeRadius: 0
+--- !u!114 &885784206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885784200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b931366a3daecc45bce0dd47b141cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: -5
+  minY: -5
+  maxY: 30
+  target: {fileID: 562162337}
+  threshold: 2
+  isFinished: 0
+  speed: 0.5
 --- !u!1 &1275738049
 GameObject:
   m_ObjectHideFlags: 0

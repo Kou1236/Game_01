@@ -38,5 +38,15 @@ public static class EventHandler
         FinishGameEvent?.Invoke();
     }
 
+    public static event Action StartScrollEvent;
+    public static void CallStartScrollEvent(){
+        StartScrollEvent?.Invoke();
+    }
+
+    public static event Action EndScrollEvent;
+    public static void CallEndScrollEvent(){
+        EndScrollEvent?.Invoke();
+    }
+
     
 }

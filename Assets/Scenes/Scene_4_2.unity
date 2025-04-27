@@ -5142,7 +5142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd98e593834efe74099f52800df09f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxXTransform: {fileID: 2054829071}
+  maxXTransform: {fileID: 938230779}
   maxPosX: 0
   moveSpeed: -0.003
   isPopup: 0
@@ -5158,7 +5158,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938230778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -5705,6 +5705,52 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1567815040}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &986226627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 986226629}
+  - component: {fileID: 986226628}
+  m_Layer: 0
+  m_Name: GameSave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &986226628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986226627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa24810ae2d0c842bc34e0d0ab884a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameSave: {fileID: 11400000, guid: f077e37a1869761428e88b6c9536d399, type: 2}
+  saveIndex: 8
+--- !u!4 &986226629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986226627}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &990030162
 GameObject:
@@ -6557,6 +6603,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 2100418047}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1263829333
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,6 +7569,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 637982681}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1482422262
 GameObject:
   m_ObjectHideFlags: 0
@@ -7853,6 +7901,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 361903244}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1512342902
 GameObject:
   m_ObjectHideFlags: 0
@@ -8278,6 +8327,7 @@ MonoBehaviour:
   isClose: 1
   popObj: {fileID: 1366341927}
   closeObj: {fileID: 1572505287}
+  isFadeIn: 0
 --- !u!1 &1614824697
 GameObject:
   m_ObjectHideFlags: 0
@@ -9241,6 +9291,10 @@ MonoBehaviour:
   minAngle: 0
   maxAngle: 6
   returnSpeed: 3
+  _initialAngle: 0
+  _prevMousePos: {x: 0, y: 0, z: 0}
+  _currentAngle: 0
+  _isDragging: 0
 --- !u!1 &1711978277
 GameObject:
   m_ObjectHideFlags: 0
@@ -9298,6 +9352,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 1572505287}
   closeObj: {fileID: 1823048922}
+  isFadeIn: 0
 --- !u!212 &1711978280
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9411,6 +9466,10 @@ MonoBehaviour:
   minAngle: -100
   maxAngle: 100
   returnSpeed: 180
+  _initialAngle: 0
+  _prevMousePos: {x: 0, y: 0, z: 0}
+  _currentAngle: 0
+  _isDragging: 0
 --- !u!1 &1714267714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10358,6 +10417,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 875480234}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!212 &1823048926
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10656,6 +10716,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 379045621}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1910291794
 GameObject:
   m_ObjectHideFlags: 0
@@ -13344,6 +13405,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 677249083}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &2100418047
 GameObject:
   m_ObjectHideFlags: 0
@@ -14156,3 +14218,4 @@ SceneRoots:
   - {fileID: 111345838}
   - {fileID: 1172279894}
   - {fileID: 646466126}
+  - {fileID: 986226629}

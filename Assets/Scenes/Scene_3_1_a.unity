@@ -1916,6 +1916,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 342910837}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!114 &604576502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2672,6 +2673,8 @@ MonoBehaviour:
   completionThreshold: 0.8
   isPost: 0
   isPaper: 1
+  isNote: 0
+  note: {fileID: 0}
   index: 0
 --- !u!331 &858585697
 SpriteMask:
@@ -3113,6 +3116,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 1204420535}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &923294619
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,6 +3866,7 @@ MonoBehaviour:
   isClose: 1
   popObj: {fileID: 190797006}
   closeObj: {fileID: 1204420535}
+  isFadeIn: 0
 --- !u!1 &1204420535
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,6 +5381,7 @@ MonoBehaviour:
   isClose: 1
   popObj: {fileID: 809671409}
   closeObj: {fileID: 1962147802}
+  isFadeIn: 0
 --- !u!1 &1815906812
 GameObject:
   m_ObjectHideFlags: 0
@@ -5566,6 +5572,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 901692092}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1829889155
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,6 +5859,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 1962147802}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1910634792
 GameObject:
   m_ObjectHideFlags: 0
@@ -5958,6 +5966,7 @@ MonoBehaviour:
   isClose: 0
   popObj: {fileID: 604576498}
   closeObj: {fileID: 0}
+  isFadeIn: 0
 --- !u!1 &1914387449
 GameObject:
   m_ObjectHideFlags: 0

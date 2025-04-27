@@ -12,7 +12,7 @@ public class ClickAction_2 : ClickAction
     }
     public override void Update(){
         // 检测鼠标左键点击（0表示左键）
-        if (Input.GetMouseButtonDown(0) && canClick)
+        if (Input.GetMouseButtonDown(0) && canClick && CursorBlock.AllowMouseButtonInput)
         {
             
             if(index < targetObject.Length){
