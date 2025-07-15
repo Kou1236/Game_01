@@ -34,6 +34,8 @@ public class RotatePhone : RotateObject
                 flowers[1].SetActive(false);
                 flowers[2].SetActive(false);
                 flowers[3].SetActive(false);
+                flowers[4].SetActive(false);
+                flowers[5].SetActive(false);
             }
             else if(accumulatedRotationY >= 0.5f && accumulatedRotationY <0.7f){
                 Debug.Log("03");
@@ -42,10 +44,18 @@ public class RotatePhone : RotateObject
                 flowers[1].SetActive(true);
                 flowers[2].SetActive(false);
                 flowers[3].SetActive(false);
+                flowers[4].SetActive(false);
+                flowers[5].SetActive(false);
             }
             else if(accumulatedRotationY >= 0.7f && accumulatedRotationY <0.8f){
                 Debug.Log("04");
                 spriteRenderer.sprite = phones[3];
+                flowers[0].SetActive(true);
+                flowers[1].SetActive(true);
+                flowers[2].SetActive(true);
+                flowers[3].SetActive(false);
+                flowers[4].SetActive(false);
+                flowers[5].SetActive(false);
             }
             else if(accumulatedRotationY >= 0.8f && accumulatedRotationY <0.9f){
                 Debug.Log("05");
@@ -53,7 +63,9 @@ public class RotatePhone : RotateObject
                 flowers[0].SetActive(true);
                 flowers[1].SetActive(true);
                 flowers[2].SetActive(true);
-                flowers[3].SetActive(false);
+                flowers[3].SetActive(true);
+                flowers[4].SetActive(false);
+                flowers[5].SetActive(false);
             }
             else if(accumulatedRotationY >= 0.9f && accumulatedRotationY <1.0f){
                 Debug.Log("06");
@@ -62,6 +74,8 @@ public class RotatePhone : RotateObject
                 flowers[1].SetActive(true);
                 flowers[2].SetActive(true);
                 flowers[3].SetActive(true);
+                flowers[4].SetActive(true);
+                flowers[5].SetActive(false);
                 canRotate = false;
             }
         }
@@ -100,6 +114,7 @@ public class RotatePhone : RotateObject
         Debug.Log("旋转累计达到180度，执行函数！");
         rotateObject.transform.DORotate(new Vector3(180f, 0, 0), duration).SetEase(Ease.InOutSine);
         spriteRenderer.sprite = phones[6];
+        flowers[5].SetActive(true);
         canRotate = false;
         StartCoroutine(RotatePhoneCoroutine());
     }

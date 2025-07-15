@@ -17,5 +17,6 @@ public class DrawManager : Singleton<DrawManager>
         for(int i = 0; i < draws.Count; i++){
             draws[i] = false;
         }
+        Cursor.visible = true;
     }
 }

@@ -19,6 +19,8 @@ public class RotateBook : RotateObject
     private bool isSecond = false;
     public GameObject transitionObject;
 
+    public bool isPage = false;
+
 
     void Start(){
         spriteRenderer = this.GetComponent<SpriteRenderer>();
@@ -58,6 +60,10 @@ public class RotateBook : RotateObject
                 }
             }
             else if(accumulatedRotationY >= 0.5f && accumulatedRotationY <0.7f){
+                if(!isPage){
+                    SoundManager.Instance.PlaySFX(8);
+                    isPage = true;
+                }
                 if(!isSecond){
                     Debug.Log("03");
                     spriteRenderer.sprite = books[2];
@@ -84,6 +90,7 @@ public class RotateBook : RotateObject
                     rotateObject.transform.rotation = new Quaternion(0, 0, 0, 0);
                     musicObject.SetActive(true);
                     isSecond = true;
+                    isPage = false;
                 }
                 else{
                     Debug.Log("10");

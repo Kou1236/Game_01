@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorManager : MonoBehaviour
+public class CursorManager : Singleton<CursorManager>
 {
-    private bool onClick;
+    public bool onClick;
     public Transform indicator;
+
+    public Texture2D[] cursorTexture;
+
+    public bool isClick = false;
    
 
     private void Update(){
@@ -14,10 +18,18 @@ public class CursorManager : MonoBehaviour
             ClickAction(ObjectAtMousePosition().gameObject);
         }
         if(Input.GetMouseButtonDown(0)){
+            isClick = true;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 0;
             indicator.position = mousePosition;
             indicator.GetComponent<ParticleSystem>().Play();
+            SoundManager.Instance.PlaySFX(0);
+            Cursor.SetCursor(cursorTexture[2], Vector2.zero, CursorMode.ForceSoftware);
+        }
+        if(Input.GetMouseButtonUp(0)){
+            isClick = false;
+            Cursor.SetCursor(cursorTexture[0], Vector2.zero, CursorMode.ForceSoftware);
+            TipManager.Instance.HideTip();
         }
     }
 

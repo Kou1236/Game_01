@@ -72,7 +72,7 @@ public class ScrollUI : MonoBehaviour
             // 启动新的弹性缓动 Tween
             transform
                 .DOMoveY(targetY, tweenDuration)
-                .SetEase(Ease.OutElastic)    // 弹性回弹效果
+                .SetEase(Ease.InOutSine)    // 弹性回弹效果
                 .SetUpdate(true);            // 即使在 Time.timeScale = 0 时也能运行
         }
     }

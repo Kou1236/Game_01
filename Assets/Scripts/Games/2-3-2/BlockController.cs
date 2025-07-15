@@ -36,7 +36,7 @@ public class BlockController : MonoBehaviour, IPointerUpHandler
     }
 
     void Update(){
-        if(progressSlider.value >= 0.3f && progressSlider.value <= 0.35f){
+        if(progressSlider.value >= 0f && progressSlider.value <= 0.1f){
             FinishGame.Instance.finish_1 = true;
         }
         else{

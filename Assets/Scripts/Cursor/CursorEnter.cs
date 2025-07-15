@@ -12,22 +12,51 @@ public class CursorEnter : MonoBehaviour
 
     public TagName tag;
 
+    private Texture2D cursorTexture1;
+    private Texture2D cursorTexture2;
+    private Texture2D cursorTexture3;
+
+    private bool isClick;
+
+    public int tipIndex = 0;
+
     void Start()
     {
         // 记录原始缩放大小
         originalScale = transform.localScale;
+        cursorTexture1 = CursorManager.Instance.cursorTexture[0];
+        cursorTexture2 = CursorManager.Instance.cursorTexture[1];
+        cursorTexture3 = CursorManager.Instance.cursorTexture[2];
     }
+
+    void Update(){
+        isClick = CursorManager.Instance.isClick;
+    }
+
+
 
     // 当鼠标悬停进入时调用
     public void OnMouseOver()
     {
-        if(this.gameObject.tag == tag.ToString())
-            transform.localScale = originalScale * scaleMultiplier;
+        if(this.gameObject.tag == tag.ToString()){
+            if(!isClick){
+                Cursor.SetCursor(cursorTexture2, Vector2.zero, CursorMode.ForceSoftware);
+                transform.localScale = originalScale * scaleMultiplier;
+                TipManager.Instance.ShowTip(tipIndex);
+            }
+            if(Input.GetMouseButtonDown(0)){
+                Cursor.SetCursor(cursorTexture3, Vector2.zero, CursorMode.ForceSoftware);
+            }
+        }
     }
 
     // 当鼠标离开时调用
     public void OnMouseExit()
     {
-        transform.localScale = originalScale;
+        if(!isClick){
+            Cursor.SetCursor(cursorTexture1, Vector2.zero, CursorMode.ForceSoftware);
+            transform.localScale = originalScale;
+            TipManager.Instance.HideTip();
+        }
     }
 }

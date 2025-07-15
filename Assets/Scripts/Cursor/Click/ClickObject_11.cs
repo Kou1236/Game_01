@@ -11,10 +11,14 @@ public class ClickObject_11 : ClickObject
     public GameObject button;
     public int index = 0;
     public bool isClicked = false;
+    public bool isSound = false;
+    public int soundIndex = 0;
     
 
     public override void Clicked()
     {   
+        if(isSound)
+            SoundManager.Instance.PlaySFX(soundIndex);
         index = (index + 1) % sprites.Count;
         spriteRenderer.sprite = sprites[index];
         if(!isClicked){

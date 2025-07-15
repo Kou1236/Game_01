@@ -49,6 +49,7 @@ public class DragObject_3 : DragObject
             openSeq.Kill();
             cdRotate();
             bird.SetActive(true);
+            SoundManager.Instance.StopAllBGM();
         });
         Debug.Log("finished！"); 
         
@@ -79,6 +80,7 @@ public class DragObject_3 : DragObject
     }
 
     public void cdRotate(){
+        AudioManager.Instance.PlayNext(0);
         cd2.transform.DORotate(new Vector3(0, 0, angle), rotateToSpeed, RotateMode.Fast)
                  .SetEase(Ease.OutQuad); // 缓出效果
 
@@ -133,6 +135,7 @@ public class DragObject_3 : DragObject
     public void StartTrain(){
         train.transform.DOScale(trainScale, trainSpeed).SetEase(Ease.InOutSine);
         trainFront.transform.DOScale(frontScale, trainSpeed).SetEase(Ease.InOutSine);
+        trainFront.GetComponent<SpriteRenderer>().sortingOrder = 4;
         black.transform.DOScale(blackScale, blackSpeed).SetEase(Ease.InOutSine).OnComplete(() => {
             black.SetActive(false);
         });

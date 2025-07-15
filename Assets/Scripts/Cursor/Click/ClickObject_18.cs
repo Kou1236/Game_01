@@ -38,6 +38,7 @@ public class ClickObject_18 : ClickObject
             tagObject.tag = "Post";
             changeTagObject.tag = "Untagged";
             this.GetComponent<Collider2D>().enabled = false;
+            Cursor.visible = false;
         }
         else{
             transform.position = originalPos;
@@ -57,5 +58,6 @@ public class ClickObject_18 : ClickObject
         }
 
     }
+
 
 }

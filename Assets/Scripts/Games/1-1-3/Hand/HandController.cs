@@ -38,8 +38,9 @@ public class HandController : MonoBehaviour
     {
         // 记录初始缩放值和初始旋转角度
         originalScale = hand.localScale;
-        currentAngle = minAngle;
-        pivotPoint.localRotation = Quaternion.Euler(0, 0, currentAngle);
+        currentAngle = pivotPoint.localRotation.eulerAngles.z;
+        // currentAngle = minAngle;
+        // pivotPoint.localRotation = Quaternion.Euler(0, 0, currentAngle);
     }
 
     void Update()
@@ -63,6 +64,7 @@ public class HandController : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && CursorBlock.AllowMouseButtonInput)
             {
                 StartExtend();
+                SoundManager.Instance.PlaySFX(1);
             }
         }
     }
@@ -127,6 +129,9 @@ public class HandController : MonoBehaviour
                     grabbedItem = null;
                     currentItemWeight = 1f;
                     LevelManager.Instance.ItemCollected();
+                    SoundManager.Instance.StopAllSFX();
+                    SoundManager.Instance.PlaySFX(2);
+                    
                 }
                 // 恢复状态，继续旋转
                 currentState = State.Rotating;

@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using System.Collections;
 
 public class DragObject_7 : DragObject
 {
@@ -16,6 +17,7 @@ public class DragObject_7 : DragObject
         Debug.Log("finished！"); 
         this.gameObject.tag = "Untagged";      
         character.SetActive(true);
+        
     }
     protected override void OnMouseDrag(){
         if (isDragging && !isFinished)
@@ -50,4 +52,5 @@ public class DragObject_7 : DragObject
         Seq.Append(transform.DOScale(0.5f*originalScale, openDuration).SetEase(Ease.OutBack));
         
     }
+
 }

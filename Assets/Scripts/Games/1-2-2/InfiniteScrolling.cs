@@ -11,6 +11,7 @@ public class InfiniteScrolling : Singleton<InfiniteScrolling>
     public float backgroundWidth = 20f;
 
     public GameObject target;
+    public int sortIndex = 1;
 
     
 
@@ -21,6 +22,7 @@ public class InfiniteScrolling : Singleton<InfiniteScrolling>
     }
     void StartScrolling()
     {
+        this.GetComponent<SpriteRenderer>().sortingOrder = sortIndex;
         float currentX = transform.position.x;
         // Tween：将物体在 scrollDuration 时间内沿 X 轴向左平移 backgroundWidth
         transform.DOMoveX(target.transform.position.x, Mathf.Abs(target.transform.position.x - currentX)/scrollSpeed)

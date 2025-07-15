@@ -72,6 +72,7 @@ public class ClickObject_10 : ClickObject
         });
 
         Pop_12 pop = glass.GetComponent<Pop_12>();
+        SoundManager.Instance.PlaySFX(9);
 
         SpriteRenderer glassSpriteRenderer = glass.GetComponent<SpriteRenderer>();
 
@@ -90,7 +91,7 @@ public class ClickObject_10 : ClickObject
         });
         Pop_12 pop = glass.GetComponent<Pop_12>();
 
-        glassPop.sprite = FoodManager.Instance.foodList[FoodManager.Instance.currentIndex].foodSprites[index];
+        glassPop.sprite = FoodManager.Instance.foodList[FoodManager.Instance.currentIndex].foodSprites[index + 3];
         glassPop.gameObject.SetActive(true);
         pop.PopObject();
 
@@ -109,7 +110,7 @@ public class ClickObject_10 : ClickObject
     IEnumerator WaitToMove(){
         yield return new WaitForSeconds(2f);
         target.SetActive(true);
-        Transition_12 transition = target.GetComponent<Transition_12>();
+        Transition_13 transition = target.GetComponent<Transition_13>();
         transition.Move();
     }
 }

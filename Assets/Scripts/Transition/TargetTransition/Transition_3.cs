@@ -9,9 +9,11 @@ public class Transition_3 : Transition
     public GameObject bubbles;
     public GameObject items;
     public GameObject time;
+    public GameObject closeObj;
 
     protected override void OnSceneTransitionEvent(){
         if(!lastTarget.activeInHierarchy){
+            closeObj.SetActive(false);
             hands.SetActive(true);
             bubbles.SetActive(true);
             items.SetActive(true);

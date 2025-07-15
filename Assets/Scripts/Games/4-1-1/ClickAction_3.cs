@@ -6,6 +6,8 @@ public class ClickAction_3 : ClickAction
 {
     public GameObject popObj;
     public GameObject nextScene;
+    public bool isMusic = false;
+    public int musicIndex = 0;
 
     void OnEnable(){
         canClick = true;
@@ -16,6 +18,9 @@ public class ClickAction_3 : ClickAction
         // 检测鼠标左键点击（0表示左键）
         if (Input.GetMouseButtonDown(0) && canClick && CursorBlock.AllowMouseButtonInput)
         {
+            if(index == 3 && isMusic){
+                AudioManager.Instance.PlayNext(musicIndex);
+            }
             if(index < targetObject.Length){
                 targetObject[index].SetActive(true);
                 index++;

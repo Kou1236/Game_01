@@ -51,9 +51,10 @@ public class PanelMove : MonoBehaviour
     }
     public void StartMovie(){
         Debug.Log("start movie!");
-        fadeTarget.DOFade(0f, 3f);
+        fadeTarget.DOFade(0f, 1f);
         fadeOriginal.DOFade(0f, 3f);
         targetSpriteRenderer.sprite = sprite;
+        targetSpriteRenderer.DOFade(0f, 1f);
         originalSpriteRenderer.sprite = sprite;
     }
 

@@ -6,6 +6,8 @@ public class VideoController_1 : VideoController
 {
     public Button myButton;          // 在 Inspector 中拖拽 Button 对象
     // public RenderTexture renderTexture;  // 在 Inspector 中拖拽 RenderTexture 对象
+    public bool isBackground = false;  // 是否为背景视频
+    public GameObject background;
 
     public override void OnVideoStart()
     {
@@ -18,6 +20,8 @@ public class VideoController_1 : VideoController
     {
         // 显示按钮
         myButton.gameObject.SetActive(true);
+        if(isBackground)
+            background.SetActive(true);
     }
 
 

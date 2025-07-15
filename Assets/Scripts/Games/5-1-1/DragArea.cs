@@ -10,6 +10,7 @@ public class DragArea : MonoBehaviour
     public float dragScale = 0.5f;
     public Vector3 originDragSize;
     public int index = 0;
+    public int soundIndex = 0;
 
     public virtual void Start()
     {
@@ -52,6 +53,7 @@ public class DragArea : MonoBehaviour
         Debug.Log("函数被执行了！");
         this.gameObject.GetComponent<Collider2D>().enabled = false;
         DragManager.Instance.isFinished[index] = true;
+        SoundManager.Instance.PlaySFX(soundIndex);
     }
 
     void OnTriggerEnter2D(Collider2D other)

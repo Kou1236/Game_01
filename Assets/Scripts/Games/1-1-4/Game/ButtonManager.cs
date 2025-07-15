@@ -48,6 +48,7 @@ public class ButtonManager : MonoBehaviour
             if (buttonID >= 0 && buttonID < buttonSprites.Length)
             {
                 characterSprite.sprite = buttonSprites[buttonID];
+                SoundManager.Instance.PlaySFX(4);
                 StartCoroutine(ResetProgress());
             }
 

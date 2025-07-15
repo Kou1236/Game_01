@@ -21,6 +21,14 @@ public class MaskBrush : MonoBehaviour
     public bool isNote = false;
     public GameObject note;
 
+    // public Transform pen;
+    // public Transform eraser;
+
+    // public Transform penPos;
+    // public Transform eraserPos;
+
+
+
 
     public int index;
 
@@ -34,6 +42,7 @@ public class MaskBrush : MonoBehaviour
             new Vector2(0.5f, 0.5f),
             sr.sprite.pixelsPerUnit
         );
+
     }
 
     void OnMouseDrag() {
@@ -127,6 +136,7 @@ public class MaskBrush : MonoBehaviour
         if(note.transform.tag == "Post"){
             ButtonClick_2.Instance.buttonStatus[index] = true;
             ButtonClick_2.Instance.rightButton.GetComponent<Button>().interactable = true;
+            DrawManager.Instance.SetAllFalse();
         }
         else
             note.transform.tag = "Post";

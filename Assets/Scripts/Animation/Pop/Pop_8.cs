@@ -16,7 +16,7 @@ public class Pop_8 : Pop
         Sequence openSeq = DOTween.Sequence();
         openSeq.Append(transform.DOMove(target.transform.position, speed).SetEase(Ease.InOutSine));
         openSeq.OnComplete(() =>{
-            Debug.Log("hhh");
+            Debug.Log("www");
             switch (isPopIndex)
             {
                 case 1:

@@ -18,7 +18,7 @@ public class Transition_13 : Transition
 
     void StartScene(){
         popObject.SetActive(true);
-        popRenderer.sprite = FoodManager.Instance.foodList[FoodManager.Instance.currentIndex].foodSprites[FoodManager.Instance.finalCount];
+        popRenderer.sprite = FoodManager.Instance.foodList[FoodManager.Instance.currentIndex].foodSprites[FoodManager.Instance.finalCount+3];
 
     }
 

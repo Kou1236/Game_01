@@ -9,6 +9,7 @@ public class Transition_5 : Transition
     public GameObject button;
     public GameObject slider;
     public GameObject spawner;
+    public GameObject startScene;
 
 
     protected override void OnSceneTransitionEvent(){
@@ -24,6 +25,8 @@ public class Transition_5 : Transition
         button.SetActive(true);
         slider.SetActive(true);
         spawner.SetActive(true);
+        // SoundManager.Instance.PlayBGM(1);
+        startScene.SetActive(true);
     }
 
     

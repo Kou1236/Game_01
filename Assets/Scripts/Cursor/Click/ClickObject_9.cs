@@ -43,6 +43,7 @@ public class ClickObject_9 : ClickObject
             
             Debug.Log("Clicked");
             animator.SetBool(boolParameterName, true);
+            SoundManager.Instance.PlaySFX(5);
             if(currentNum < maxNum - 4){
                 ChangeNum();
             }

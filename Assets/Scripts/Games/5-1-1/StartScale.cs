@@ -14,10 +14,13 @@ public class StartScale : MonoBehaviour
     public GameObject closeObj;
     public Transform moveObj;
     public Transform moveTarget;
+    public GameObject popObj_4;
 
     void OnEnable(){
         popObj_2.SetActive(true);
-        moveObj.DOMove(moveTarget.position, scaleTime).SetEase(Ease.InOutSine);
+        moveObj.DOMove(moveTarget.position, scaleTime).SetEase(Ease.InOutSine).OnComplete(()=> {
+            popObj_4.SetActive(true);
+        });
         target.DOScale(startScale, scaleTime).SetEase(Ease.InOutSine).OnComplete(()=> {
             SpriteRenderer spriteRenderer = closeObj.GetComponent<SpriteRenderer>();
             spriteRenderer.DOFade(0, scaleTime);

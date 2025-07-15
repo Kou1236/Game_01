@@ -15,6 +15,7 @@ public class DragScaleY : MonoBehaviour
 
     public Transform targetObj;
 
+
     void Start()
     {
         cam = Camera.main;                                    // 获取主摄像机引用 :contentReference[oaicite:0]{index=0}
@@ -50,7 +51,9 @@ public class DragScaleY : MonoBehaviour
 
         // 更新上次鼠标位置
         lastMouseWorldPos = currentMouseWorldPos;
+
     }
+
 
     void Update(){
         if(targetObj.transform.localScale.y <= 0.03f){

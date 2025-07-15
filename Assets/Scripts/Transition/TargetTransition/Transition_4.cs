@@ -5,14 +5,18 @@ using UnityEngine;
 public class Transition_4 : Transition
 {
     public GameObject lastTarget;
-    public GameObject video;
+    public GameObject obj_1;
+    public GameObject obj_2;
 
     protected override void OnSceneTransitionEvent(){
         if(!lastTarget.activeInHierarchy){
-            video.SetActive(true);
+            obj_1.SetActive(true);
             this.gameObject.SetActive(false);
+            obj_2.SetActive(false);
         }
     }
+
+
 
     
 }

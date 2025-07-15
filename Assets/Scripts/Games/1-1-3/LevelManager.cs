@@ -9,6 +9,7 @@ public class LevelManager : Singleton<LevelManager>
     public GameObject hands;
     public GameObject bubbles;
     public GameObject target;
+    public GameObject popObj;
 
 
     /// <summary>
@@ -38,7 +39,11 @@ public class LevelManager : Singleton<LevelManager>
             {
                 Destroy(bubbles);
             }
+            if (popObj != null){
+                popObj.SetActive(true);
+            }
             // 这里还可添加其他通关逻辑（如播放音效、加载下一关等）
+            // SoundManager.Instance.PlaySFX(3);
         }
     }
 
